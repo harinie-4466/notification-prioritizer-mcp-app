@@ -4,6 +4,7 @@ import { GmailModule } from './modules/gmail/gmail.module.js';
 import { SlackModule } from './modules/slack/slack.module.js';
 import { JiraModule } from './modules/jira/jira.module.js';
 import { CalendarModule } from './modules/calendar/calendar.module.js';
+import { GithubModule } from './modules/github/github.module.js';
 import { SystemHealthCheck } from './health/system.health.js';
 
 /**
@@ -31,7 +32,8 @@ import { SystemHealthCheck } from './health/system.health.js';
     GmailModule,
     SlackModule,
     JiraModule,
-    CalendarModule
+    CalendarModule,
+    GithubModule
   ],
   providers: [
     // Health Checks
