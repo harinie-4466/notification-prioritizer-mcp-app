@@ -5,6 +5,7 @@ import { SlackModule } from './modules/slack/slack.module.js';
 import { JiraModule } from './modules/jira/jira.module.js';
 import { CalendarModule } from './modules/calendar/calendar.module.js';
 import { GithubModule } from './modules/github/github.module.js';
+import { ContextModule } from './modules/context/context.module.js';
 import { SystemHealthCheck } from './health/system.health.js';
 
 /**
@@ -33,7 +34,8 @@ import { SystemHealthCheck } from './health/system.health.js';
     SlackModule,
     JiraModule,
     CalendarModule,
-    GithubModule
+    GithubModule,
+    ContextModule
   ],
   providers: [
     // Health Checks
