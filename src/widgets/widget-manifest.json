@@ -41,6 +41,85 @@
         }
       ],
       "tags": ["calculator", "math", "result"]
+    },
+    {
+      "uri": "/priority-dashboard",
+      "name": "Priority Dashboard",
+      "description": "Displays prioritized notifications in 3 columns: Urgent Now, Normal, and FYI Only",
+      "examples": [
+        {
+          "name": "Prioritized List Example",
+          "description": "Example of prioritized work notifications",
+          "data": [
+            {
+              "id": "gmail_work_1",
+              "source": "gmail",
+              "sender": "security-alerts@company.com",
+              "title": "[ACTION REQUIRED] Update your SSH keys",
+              "snippet": "Please update your SSH keys by Friday to maintain access to internal repos.",
+              "timestamp": "2026-07-26T03:00:00Z",
+              "link": "https://mail.google.com/mail/u/0/#inbox/1",
+              "accountId": "gmail_work",
+              "accountEmail": "jane@company.com",
+              "tier": "urgent_now",
+              "reason": "Critical security alert requiring action."
+            },
+            {
+              "id": "slack_1",
+              "source": "slack",
+              "sender": "Alice Chen",
+              "title": "Direct Message from Alice Chen",
+              "snippet": "Hey, are you free to jump on a quick call? Need to align on the database schema changes for the user service.",
+              "timestamp": "2026-07-26T03:30:00Z",
+              "link": "https://slack.com/archives/D12345/p1720000000",
+              "accountId": "default",
+              "accountEmail": null,
+              "tier": "urgent_now",
+              "reason": "Direct message from a key collaborator."
+            },
+            {
+              "id": "jira_1",
+              "source": "jira",
+              "sender": "Sarah Jenkins",
+              "title": "Ticket Assigned: SEC-402 - Resolve SSRF Vulnerability in Auth Endpoint",
+              "snippet": "You have been assigned to SEC-402. High priority security vulnerability reported in staging.",
+              "timestamp": "2026-07-26T02:45:00Z",
+              "link": "https://jira.company.com/browse/SEC-402",
+              "accountId": "default",
+              "accountEmail": null,
+              "tier": "urgent_now",
+              "reason": "Action required: Task is due today."
+            },
+            {
+              "id": "github_1",
+              "source": "github",
+              "sender": "Bob Smith",
+              "title": "Review Request: PHOENIX-89 Auth Integration",
+              "snippet": "@bob requested your review on PR #142: \"Implement database migration and schema update for User auth sessions\".",
+              "timestamp": "2026-07-26T03:05:00Z",
+              "link": "https://github.com/company/project-phoenix/pull/142",
+              "accountId": "default",
+              "accountEmail": null,
+              "tier": "normal",
+              "reason": "Pull Request review request."
+            },
+            {
+              "id": "gmail_personal_3",
+              "source": "gmail",
+              "sender": "netflix@info.netflix.com",
+              "title": "New Season of your favorite show is out!",
+              "snippet": "Start streaming the final season now on Netflix.",
+              "timestamp": "2026-07-25T20:00:00Z",
+              "link": "https://mail.google.com/mail/u/1/#inbox/3",
+              "accountId": "gmail_personal",
+              "accountEmail": "jane.personal@gmail.com",
+              "tier": "fyi_only",
+              "reason": "Standard newsletter or email alert."
+            }
+          ]
+        }
+      ],
+      "tags": ["dashboard", "prioritizer", "notifications"]
     }
   ],
   "generatedAt": "2025-01-01T00:00:00.000Z"
