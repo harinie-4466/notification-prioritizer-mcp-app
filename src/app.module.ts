@@ -6,6 +6,7 @@ import { JiraModule } from './modules/jira/jira.module.js';
 import { CalendarModule } from './modules/calendar/calendar.module.js';
 import { GithubModule } from './modules/github/github.module.js';
 import { ContextModule } from './modules/context/context.module.js';
+import { PrioritizerModule } from './modules/prioritizer/prioritizer.module.js';
 import { SystemHealthCheck } from './health/system.health.js';
 
 /**
@@ -35,7 +36,8 @@ import { SystemHealthCheck } from './health/system.health.js';
     JiraModule,
     CalendarModule,
     GithubModule,
-    ContextModule
+    ContextModule,
+    PrioritizerModule
   ],
   providers: [
     // Health Checks
