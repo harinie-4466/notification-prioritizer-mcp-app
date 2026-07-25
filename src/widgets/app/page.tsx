@@ -226,11 +226,12 @@ export default function ClientDashboard() {
   ];
 
   // State Management
+  const [mounted, setMounted] = useState(false);
   const [chatLogs, setChatLogs] = useState<{ sender: 'user' | 'agent'; text: string; timestamp: Date }[]>([
     {
       sender: 'agent',
       text: 'Hello! I am your Notification Prioritization Agent. I can fetch updates from Slack, Teams, Gmail, Jira, GitHub, and Calendar, synthesize your workspace context, and prioritize what matters right now.',
-      timestamp: new Date()
+      timestamp: new Date('2026-07-26T05:00:00Z')
     }
   ]);
   const [inputText, setInputText] = useState('');
@@ -242,6 +243,7 @@ export default function ClientDashboard() {
 
   // Load initial data
   useEffect(() => {
+    setMounted(true);
     runPrioritizationPipeline(false);
   }, []);
 
@@ -623,7 +625,7 @@ export default function ClientDashboard() {
                     textAlign: log.sender === 'user' ? 'right' : 'left',
                     marginTop: '4px'
                   }}>
-                    {log.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
+                    {mounted ? log.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }) : ''}
                   </div>
                 </div>
               ))}
