@@ -3,6 +3,7 @@ import { CalculatorModule } from './modules/calculator/calculator.module.js';
 import { GmailModule } from './modules/gmail/gmail.module.js';
 import { SlackModule } from './modules/slack/slack.module.js';
 import { JiraModule } from './modules/jira/jira.module.js';
+import { CalendarModule } from './modules/calendar/calendar.module.js';
 import { SystemHealthCheck } from './health/system.health.js';
 
 /**
@@ -29,7 +30,8 @@ import { SystemHealthCheck } from './health/system.health.js';
     CalculatorModule,
     GmailModule,
     SlackModule,
-    JiraModule
+    JiraModule,
+    CalendarModule
   ],
   providers: [
     // Health Checks
