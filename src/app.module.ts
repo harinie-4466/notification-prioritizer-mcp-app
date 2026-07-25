@@ -2,6 +2,7 @@ import { McpApp, Module, ConfigModule } from '@nitrostack/core';
 import { CalculatorModule } from './modules/calculator/calculator.module.js';
 import { GmailModule } from './modules/gmail/gmail.module.js';
 import { SlackModule } from './modules/slack/slack.module.js';
+import { JiraModule } from './modules/jira/jira.module.js';
 import { SystemHealthCheck } from './health/system.health.js';
 
 /**
@@ -27,7 +28,8 @@ import { SystemHealthCheck } from './health/system.health.js';
     ConfigModule.forRoot(),
     CalculatorModule,
     GmailModule,
-    SlackModule
+    SlackModule,
+    JiraModule
   ],
   providers: [
     // Health Checks
