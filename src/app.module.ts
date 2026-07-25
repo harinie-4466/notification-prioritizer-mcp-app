@@ -1,5 +1,6 @@
 import { McpApp, Module, ConfigModule } from '@nitrostack/core';
 import { CalculatorModule } from './modules/calculator/calculator.module.js';
+import { GmailModule } from './modules/gmail/gmail.module.js';
 import { SystemHealthCheck } from './health/system.health.js';
 
 /**
@@ -11,7 +12,7 @@ import { SystemHealthCheck } from './health/system.health.js';
 @McpApp({
   module: AppModule,
   server: {
-    name: 'calculator-server',
+    name: 'notification-prioritizer-server',
     version: '1.0.0'
   },
   logging: {
@@ -23,7 +24,8 @@ import { SystemHealthCheck } from './health/system.health.js';
   description: 'Root application module',
   imports: [
     ConfigModule.forRoot(),
-    CalculatorModule
+    CalculatorModule,
+    GmailModule
   ],
   providers: [
     // Health Checks
